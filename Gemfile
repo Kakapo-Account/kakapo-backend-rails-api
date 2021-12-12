@@ -3,7 +3,19 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.2'
 
-gem 'rails', '~> 6.0.4', '>= 6.0.4.1'
+gem 'activerecord', '6.0.4.1'
+gem 'activemodel', '6.0.4.1'
+gem 'actioncable', '6.0.4.1'
+gem 'actionpack', '6.0.4.1'
+gem 'actionmailbox', '6.0.4.1'
+gem 'actionmailer', '6.0.4.1'
+gem 'actiontext', '6.0.4.1'
+gem 'activejob', '6.0.4.1'
+gem 'activestorage', '6.0.4.1'
+gem 'activesupport', '6.0.4.1'
+gem 'actionview', '6.0.4.1'
+gem 'railties', '6.0.4.1'
+
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 4.1'
 gem 'bootsnap', '>= 1.4.2', require: false
