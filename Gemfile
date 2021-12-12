@@ -5,7 +5,6 @@ ruby '2.7.2'
 
 gem 'activerecord', '6.0.4.1'
 gem 'activemodel', '6.0.4.1'
-gem 'actioncable', '6.0.4.1'
 gem 'actionpack', '6.0.4.1'
 gem 'actionmailbox', '6.0.4.1'
 gem 'actionmailer', '6.0.4.1'
