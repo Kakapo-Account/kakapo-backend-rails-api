@@ -14,6 +14,10 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+group :test do
+  gem 'shoulda-matchers', '~> 5.0'
+end
+
 group :development, :test do
   gem 'pry', '~> 0.13.1'
   gem 'rspec-rails', '~> 5.0.0'
