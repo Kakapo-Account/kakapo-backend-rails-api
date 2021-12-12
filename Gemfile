@@ -36,6 +36,7 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'brakeman'
   gem 'bundler-audit'
+  gem 'license_finder'
   gem 'pry', '~> 0.13.1'
   gem 'rspec-rails', '~> 5.0.0'
 end
