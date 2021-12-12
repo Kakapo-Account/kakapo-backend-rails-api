@@ -60,6 +60,7 @@ GEM
       debug_inspector (>= 0.0.1)
     bootsnap (1.9.3)
       msgpack (~> 1.0)
+    brakeman (5.1.2)
     builder (3.2.4)
     bundler-audit (0.9.0.1)
       bundler (>= 1.2.0, < 3)
@@ -171,6 +172,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootsnap (>= 1.4.2)
+  brakeman
   bundler-audit
   factory_bot_rails
   listen (~> 3.2)
