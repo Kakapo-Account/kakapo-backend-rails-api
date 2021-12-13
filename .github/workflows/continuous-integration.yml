@@ -1,0 +1,39 @@
+name: Continuous-Integration
+on: [pull_request]
+
+jobs:
+  RSpec:
+    runs-on: ubuntu-18.04
+    services:
+      postgres:
+        image: postgres:12
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_DB: postgres
+          POSTGRES_PASSWORD: postgres
+        ports: ['5432:5432']
+        options:
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Setup Ruby and Install Gems
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: Build and Run Tests
+        env:
+          DATABASE_URL: postgres://postgres:@localhost:5432/test
+          RAILS_ENV: test
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+        run: |
+          sudo apt-get -yqq install libpq-dev
+          bundle exec rails db:prepare
+          bundle exec rspec spec
