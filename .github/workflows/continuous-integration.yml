@@ -2,6 +2,22 @@ name: Continuous-Integration
 on: [pull_request]
 
 jobs:
+  LicenseFinder:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Setup Ruby and Install Gems
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: Check Allowed Licenses
+        run: |
+          bundle exec license_finder permitted_licenses add "MIT" "Apache 2.0" "Simplified BSD" "Simplified BSD, ruby" "Apache 2.0, MIT" "New BSD" "Artistic-2.0, GPL-2.0+, MIT" "Brakeman Public Use License" "GPL-3.0+"
+          bundle exec license_finder
+
   RSpec:
     runs-on: ubuntu-18.04
     services:
