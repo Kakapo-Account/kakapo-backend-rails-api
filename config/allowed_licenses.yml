@@ -1,0 +1,32 @@
+---
+- - :permit
+  - MIT
+  - &1
+    :who:
+    :why:
+    :versions: []
+    :when: 2021-12-12 23:58:32.994637000 Z
+- - :permit
+  - Apache 2.0
+  - *1
+- - :permit
+  - Simplified BSD
+  - *1
+- - :permit
+  - Simplified BSD, ruby
+  - *1
+- - :permit
+  - Apache 2.0, MIT
+  - *1
+- - :permit
+  - New BSD
+  - *1
+- - :permit
+  - Artistic-2.0, GPL-2.0+, MIT
+  - *1
+- - :permit
+  - Brakeman Public Use License
+  - *1
+- - :permit
+  - GPL-3.0+
+  - *1

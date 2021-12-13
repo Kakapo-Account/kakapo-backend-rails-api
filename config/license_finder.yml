@@ -1,0 +1,4 @@
+---
+decisions_file: 'config/allowed_licenses.yml'
+enabled_package_managers:
+  - bundler
